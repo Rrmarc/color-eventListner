@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+</head>
+
+<body style="width: 100%; text-align: center; background-color: white;">
+    <button style=" font-size:50px; border-radius: 50%; width: 300px; height:200px; margin:0 auto;">FUN COLOR</button>
+
+    <script>
+        let butt = document.querySelector("button")
+        let body = document.querySelector("body")
+
+        let colorList = ["#069E2D", "#CB48B7", "#01BAEF", "#FE7F2D", "#E3C0D3"]
+
+        function changeBackground() {
+            let currentColor = body.style.backgroundColor;
+            let random = Math.floor(Math.random() * colorList.length)
+            if (currentColor) {
+                body.style.backgroundColor = `${colorList[random]}`
+                console.log(currentColor)
+            }
+        }
+
+        butt.addEventListener("click", changeBackground);
+    </script>
+</body>
+
+</html>
